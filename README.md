@@ -59,3 +59,30 @@ npx prisma studio
 ```bash
 npx prisma generate
 ```
+
+
+# References
+# clone the repo
+git clone https://github.com/ironhack-labs/lesson-code-sql-prisma-orm-final-result.git
+
+# navigate to the cloned repo
+cd lesson-code-sql-prisma-orm-final-result
+
+# run npm install
+npm i
+
+#
+# Create a .env file with the location of your DB...
+# IMPORTANT: replace "postgres" and "ilovepizza" with a valid user and password for your database!
+#
+echo DATABASE_URL="postgresql://postgres:ilovepizza@localhost:5432/prisma-library-demo?schema=public" > .env
+
+# update db
+npx prisma migrate dev
+echo DATABASE_URL="postgresql://postgres:ilovepizza@localhost:5432/prisma-library-demo?schema=public" > .env
+
+# update db
+npx prisma migrate dev
+
+# run the app in development mode
+npm run dev
